@@ -1,0 +1,44 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Labwork 1: Gradient Descent}
+\author{Pham Quang Duong - 2540048}
+
+\begin{document}
+\maketitle
+
+
+\section{Implement Gradient Descent}
+\begin{itemize}
+    \item[-] \textbf{Step 1:} Define f(x) and f\_(x)
+    \item[-] \textbf{Step 2:} Radom initialize $x = x_0$, r, and thresh\_hold to stop
+    \item[-] \textbf{Step 3:} Define the gradient\_descent() function with: 
+    \begin{itemize}
+        \item[$\bullet$]Assign x = x - r * f\_(x)
+        \item[$\bullet$]Recompute f(x). Stop if f(x) is small enough or repeat if it's not
+    \end{itemize}
+\end{itemize}
+
+\section{Effect of different learning rate r}
+\begin{itemize}
+    \item \textbf{Small learning rate:} The algorithm takes very small steps. This means that it requires many iterations to find the minimum value.
+    
+    \item \textbf{Good learning rate:} The algorithm works efficiently. It moves towards the minimum point quickly and reaches the correct answer in a reasonable number of steps.
+    
+    \item \textbf{Large learning rate:} The algorithm takes too many steps. It may jump over the minimum point between two values. In this case, it cannot find the minimum.
+    
+    \item \textbf{Very large learning rate:} The algorithm fails because it moves further away from the minimum in every step. 
+\end{itemize}
+\end{document}
